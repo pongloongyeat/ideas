@@ -53,6 +53,28 @@ Not worked on
 <b>Comments: </b>
 This could be a possible fork of Granite if this is to be worked on since I doubt elementary's devs would like the extra maintenance debt on Granite that comes with this idea. Maybe `granite-utils`? So it could be `granite-utils --message-dialog`.
 
+## Granite.Dialog
+
+See [elementary/granite#476](https://github.com/elementary/granite/discussions/476). Granite.Dialog only looks good on elementary's own stylesheet and looks broken on Adwaita (see image below). Most custom themes are based-off of Adwaita so adoption of Granite in apps made for other DEs wouldn't be too ideal.
+
+<b>Elementary:</b>
+
+![screenshot](assets/Granite.Dialog/elementary.png)
+
+<b>Adwaita:</b>
+
+![screenshot](assets/Granite.Dialog/adwaita.png)
+
+<b>Status: </b>
+Not worked on
+
+<b>Comments: </b>
+The best way to start this off is to subclass `Hdy.Window` rather than `Gtk.Dialog`. This gets rid of the empty headerbar so it doesn't show up in both elementary and Adwaita.
+
+![screenshot](assets/Granite.Dialog/screenshot.png)
+
+Once the headerbar is gone, the margin just needs to be increased all around and you'll get the same old Granite.MessageDialog. After that is mostly reimplementing Gtk's `Dialog` methods.
+
 <!--
 ## Template
 
@@ -63,7 +85,7 @@ Description.
 ![screenshot](assets/name_of_folder_with_spacings_encoded_as_%20/screenshot.png)
 
 <b>Status: </b>
-Being worked on/Not started/Discontinued/Finished
+Being worked on/Not started/Discontinued/Finished/Not worked on
 
 <b>Comments: </b>
 Bla
