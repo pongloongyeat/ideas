@@ -33,6 +33,26 @@ Inspired by killall, KillSwitch was also written in just one (Python) file. This
 
 Perhaps a future rewrite of this is possible, with less to show to the user so the UI part of code doesn't take up the bulk of the file.
 
+## Extending Granite
+
+Inspired by the issue faced by KillSwitch, it may be quite the dream to add CLI functionality to libgranite, i.e. something like
+
+```bash
+granite-message-dialog --primary-text="Are you sure you want to proceed?" \
+    --secondary-text="This will kill all selected processes. Please save your work before proceeding" \
+    --image-icon-name="dialog-warning" \
+    --show-cancel \
+    --ok-name="Proceed"
+```
+
+This makes it incredibly easy to write bash scripts while maintaining a very native-look to the script.
+
+<b>Status: </b>
+Not worked on
+
+<b>Comments: </b>
+This could be a possible fork of Granite if this is to be worked on since I doubt elementary's devs would like the extra maintenance debt on Granite that comes with this idea. Maybe `granite-utils`? So it could be `granite-utils --message-dialog`.
+
 <!--
 ## Template
 
@@ -46,6 +66,5 @@ Description.
 Being worked on/Not started/Discontinued/Finished
 
 <b>Comments: </b>
-
 Bla
 -->
