@@ -4,7 +4,7 @@ Mostly just ideas I have that I'll probably work on for a few days and forget ab
 
 Contact me if you'd like to start on an idea of mine and I'd be glad to contribute!
 
-## Wingpanel Drives Indicator
+## [Wingpanel Drives Indicator](https://github.com/pongloongyeat/wingpanel-indicator-drives)
 
 The Pantheon DE provides no way of knowing when someone has plugged in their removable USB drive. Since elementary's HIG reserves indicators for *system* statuses, adding a drive indicator would probably work here.
 
@@ -17,7 +17,7 @@ Ideally, it should show the drive and its available volumes (much like Files sho
 <b>Status:</b>
 Being worked on
 
-## KillSwitch
+## [KillSwitch](https://github.com/pongloongyeat/killswitch)
 
 Inspired by [killall](https://www.reddit.com/r/MacOS/comments/lt1vlh/a_simple_automator_app_with_an_intuitive_icon/). Allow a user to kill all background apps/non-essential services.
 
