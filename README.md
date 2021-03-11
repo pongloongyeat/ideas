@@ -53,7 +53,7 @@ This could be a possible fork of Granite if this is to be worked on since I doub
 
 ## Granite.Dialog
 
-See [elementary/granite#476](https://github.com/elementary/granite/discussions/476). Granite.Dialog only looks good on elementary's own stylesheet and looks broken on Adwaita (see image below). Most custom themes are based-off of Adwaita so adoption of Granite in apps made for other DEs wouldn't be too ideal.
+See [elementary/granite#476](https://github.com/elementary/granite/discussions/476). `Granite.Dialog` only looks good on elementary's own stylesheet and looks broken on Adwaita (see image below). Most custom themes are based-off of Adwaita so adoption of Granite in apps made for other DEs wouldn't be too ideal.
 
 <b>Elementary:</b>
 
@@ -71,7 +71,19 @@ The best way to start this off is to subclass `Hdy.Window` rather than `Gtk.Dial
 
 ![screenshot](assets/Granite.Dialog/screenshot.png)
 
-Once the headerbar is gone, the margin just needs to be increased all around and you'll get the same old Granite.MessageDialog. After that is mostly reimplementing Gtk's `Dialog` methods.
+Once the headerbar is gone, the margin just needs to be increased all around and you'll get the same old `Granite.MessageDialog`. After that is mostly reimplementing Gtk's `Dialog` methods.
+
+## Granite.RichTextView
+
+Currently, implementation of RichText is possible in `Gtk.TextView` by use of `Gtk.TextTags`. This is easy when it comes to traditional mouse-based rich text editors where you would highlight the text and click on a button to apply the styling (bold, italicise, etc.). If one is to go for a more productive experience, these rich styling should be applied as you type. See [elementary/calender#656](https://github.com/elementary/calendar/pull/656) for a glimpse of the problem.
+
+Ultimately, we'd want to make use of `Gtk.TextView` and `Gtk.TextBuffer` to apply our `Gtk.TextTag`, so `Granite.RichTextView` should subclass `Gtk.TextView` and have additional methods of adding tags, which scans and applies the required styling.
+
+<b>Mockup:</b>
+None
+
+<b>Status: </b>
+Not worked on
 
 <!--
 ## Template
