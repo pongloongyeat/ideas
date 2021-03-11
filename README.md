@@ -31,8 +31,6 @@ Finished
 <b>Comments:</b>
 Inspired by killall, KillSwitch was also written in just one (Python) file. This is doable with very little code in killall since it uses AppleScript, a very descriptive scripting language that integrates very well with Apple's ecosystem, including showing dialogs. Since this isn't possible in elementaryOS, the file seems way too cluttered and has too much UI-related code.
 
-Perhaps a future rewrite of this is possible, with less to show to the user so the UI part of code doesn't take up the bulk of the file.
-
 ## Extending Granite
 
 Inspired by the issue faced by KillSwitch, it may be quite the dream to add CLI functionality to libgranite, i.e. something like
